@@ -33,15 +33,16 @@ def llm_sentence(translated_word, language):
             "role": "system",
             "content": (
                 "You are a language teacher. "
-                "You create VERY simple sentences for beginners."
+                "You create simple, natural sentences for beginners."
             )
         },
         {
             "role": "user",
             "content": (
-                f"Create ONE very simple sentence (max 6 words) in language code '{language}'. "
-                f"The sentence MUST contain the word '{translated_word}'. "
-                f"Return ONLY the sentence."
+                f"Make a simple beginner-friendly sentence in {language} using the word '{word}'. "
+                "It should sound natural and clearly show the meaning of the word. "
+                "Keep it short and easy to understand."
+                "Return ONLY the sentence."
             )
         }
     ]
@@ -49,7 +50,7 @@ def llm_sentence(translated_word, language):
     try:
         response = client.chat.completions.create(
             messages=messages,
-            max_tokens=20,
+            max_tokens=30,
             temperature=0.5
         )
         return response.choices[0].message.content.strip()
