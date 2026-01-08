@@ -28,19 +28,19 @@ languages = {
 }
 
 def llm_sentence(translated_word, language):
-messages = [
-    {
-        "role": "system",
-        "content": "You are a language teacher. Create very simple beginner-friendly sentences."
-    },
-    {
-        "role": "user",
-        "content": (
-            f"Write one short and natural sentence in {language} using the word '{word}'. "
-            "Keep it simple, easy to understand, and do NOT explain the word."
-        )
-    }
-]
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a language teacher. Create very simple beginner-friendly sentences."
+        },
+        {
+            "role": "user",
+            "content": (
+                f"Write one short and natural sentence in {language} using the word '{translated_word}'. "
+                "Keep it simple, easy to understand, and do NOT explain the word."
+            )
+        }
+    ]
 
     try:
         response = client.chat.completions.create(
