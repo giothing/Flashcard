@@ -36,9 +36,11 @@ def llm_sentence(translated_word, language):
         {
             "role": "user",
             "content": (
-                f"Write ONE short sentence ONLY in {language} using the word '{translated_word}'. "
-                "It must be 3-6 words. Do NOT mix languages. "
-                "Do NOT explain the word. Do NOT add extra words. "
+                f"Write ONE short, natural, beginner-friendly sentence ONLY in {language} "
+                f"using the word '{word}'. "
+                "Use 3-6 words. "
+                "Do NOT mix languages. "
+                "Do NOT explain the word. "
                 "Return ONLY the sentence."
             )
         }
