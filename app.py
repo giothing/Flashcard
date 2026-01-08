@@ -38,7 +38,7 @@ def llm_sentence(translated_word, language):
             "content": (
                 f"Write ONE short, natural, beginner-friendly sentence ONLY in {language} "
                 f"using the word '{translated_word}'. "
-                "Use simple words (3-6 words). Do NOT mix languages. "
+                "Use 3-6 words. Do NOT mix languages. "
                 "Do NOT explain the word. Return ONLY the sentence."
             )
         }
@@ -47,8 +47,8 @@ def llm_sentence(translated_word, language):
     try:
         response = client.chat.completions.create(
             messages=messages,
-            max_tokens=30,
-            temperature=0.5
+            max_tokens=25,
+            temperature=0.4
         )
         return response.choices[0].message.content.strip()
     except Exception:
