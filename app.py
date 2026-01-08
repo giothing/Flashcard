@@ -61,8 +61,10 @@ def text_to_speech(text, lang):
         tts.write_to_fp(fp)
         fp.seek(0)
         return fp
-    except:
+    except Exception as e:
+        st.error(f"TTS error: {e}")
         return None
+
 
 target_lang_name = st.selectbox("აირჩიეთ სამიზნე ენა", list(languages.keys()))
 target_lang = languages[target_lang_name]
