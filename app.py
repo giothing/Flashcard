@@ -15,6 +15,8 @@ if not HF_TOKEN:
 MODEL_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
 client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
 
+st.image("tbc-logo.png", width=200)
+
 st.title("GeoFlashcards - AI Flashcard გენერატორი")
 st.markdown("LLM-ით გენერირებული მაგალითები და აუდიო გახმოვანება")
 
