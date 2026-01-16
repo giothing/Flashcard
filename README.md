@@ -1,10 +1,21 @@
-# GeoFlashcards – AI Flashcard Generator
+# 🇬🇪 GeoFlashcards - AI Flashcard Generator
 
-Generate AI flashcards with example sentences and audio.
+GeoFlashcards არის AI აპლიკაცია, რომელიც ქართული სიტყვების საფუძველზე ქმნის უცხოენოვან ფლეშბარათებს, მაგალითებსა და აუდიო ფაილებს.
 
-## Setup
+## 🚀 როგორ ჩავრთოთ აპლიკაცია
 
-1. Install dependencies:
+1. **დააინსტალირეთ ბიბლიოთეკები:**
+   გახსენით ტერმინალი და ჩაწერეთ:
+   ```bash
+   pip install streamlit deep-translator gTTS huggingface_hub
+2. Hugging Face Token-ის მომზადება:
 
-```bash
-pip install -r requirements.txt
+დარეგისტრირდით Hugging Face-ზე.
+
+Settings -> Access Tokens-ში შექმენით ახალი "Read" ტოკენი.
+
+თქვენს კომპიუტერში შექმენით Environment Variable სახელით HF_TOKEN.
+
+3. აპლიკაციის გაშვება:
+   ```bash
+   streamlit run app.py
